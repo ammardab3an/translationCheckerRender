@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    <h3 style="color: red;">please note that I'm using a free account on pythoneverywhere, and they currently don't allow all requests suchas netlify pages, you can freely clone the code and run it locally and that would work just fine.</h3>
+    <form action="/scan/" method="POST">
+        {% csrf_token %}
+        <label for="urls"></label>
+        <textarea name="urls" id="urls" cols="30" rows="10">
+https://google.com
+https://ammardab3an99.github.io/
+        </textarea>
+        <button type="submit">submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "translationchecker"
+version = "0.1.0"
+description = ""
+authors = ["Ammar Dab3an <ammar.dab3an99@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.7"
+django-model-utils = "^4.3.1"
+djangorestframework = "^3.14.0"
+django-imagekit = "^4.1.0"
+pillow = "^9.4.0"
+django-extensions = "^3.2.1"
+beautifulsoup4 = "^4.11.2"
+requests = "^2.28.2"
+gunicorn = "^20.1.0"
+whitenoise = {extras = ["brotli"], version = "^6.4.0"}
+dj-database-url = "^1.2.0"
+psycopg2-binary = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

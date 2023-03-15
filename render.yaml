@@ -1,0 +1,20 @@
+databases:
+  - name: translationChecker
+    databaseName: translationChecker
+    user: translationChecker
+
+services:
+  - type: web
+    name: translationChecker
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn translationChecker.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: translationChecker
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
